@@ -21,7 +21,7 @@ def gen_image(task):
 
     if not os.path.exists(temp_image_file) and not os.path.exists(image_file_name):
         client = OpenAI()
-        image_prompt = task["description_prompt"]
+        image_prompt = task["description_image"]
         image_url = client.images.generate(
             model=AI_IMAGE_MODEL,
             prompt=image_prompt,
@@ -44,7 +44,7 @@ def gen_image(task):
 
     if not os.path.exists(temp_image_file) and not os.path.exists(image_file_name):
         client = OpenAI()
-        image_prompt = task["solution_prompt"]
+        image_prompt = task["solution_image"]
         image_url = client.images.generate(
             model=AI_IMAGE_MODEL,
             prompt=image_prompt,
