@@ -42,7 +42,7 @@ class Project(CommonBlogger):
             text_generator=OpenAITextGenerator(),
             topic_word_limit=300,
             days_between_posts=timedelta(days=3),
-            reviewer=TelegramSender(channel_id=-1002312034777),
+            reviewer=TelegramSender(channel_id=-1002312034777, send_text_with_image=False),
             senders=[TelegramSender(channel_id=f"@NextToTheFuture"), InstagramSender(channel_token_name='FUTUREUNLOCKED_OFFICIAL_TOKEN')],
             **kwargs
         )
